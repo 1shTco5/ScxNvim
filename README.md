@@ -1,0 +1,2 @@
+# ScxNvim
+Scx Neovim Configuration
