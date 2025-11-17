@@ -20,3 +20,6 @@ map('n', '<C-s>', '<cmd>w<CR>', { desc = 'Save File' }, { silent = true })
 map('i', '<C-s>', '<Esc><cmd>w<CR>a', { desc = 'Save File' }, { silent = true })
 vim.api.nvim_create_user_command('W', 'w', {})
 
+-----Template-----
+require("template.csharp.unity")
+require("template.cpp.generate")
