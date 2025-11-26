@@ -12,7 +12,7 @@ return {
         -- vim.lsp.config("lua_ls", require("plugins.lsp.lsp_config.lua_ls"))
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("clangd")
-        vim.lsp.config("plugins.lsp.lsp_config.pyright")
+        vim.lsp.config("pyright", require("plugins.lsp.lsp_config.pyright"))
         vim.lsp.enable("pyright")
     end
 }
