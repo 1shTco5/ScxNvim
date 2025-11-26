@@ -15,7 +15,7 @@ return {
         },
         config = function ()
             require("nvim-dap-virtual-text").setup()
-            require("noice").setup()
+            --require("noice").setup()
             require("plugins.dap.dapui")
         end
     }
