@@ -26,7 +26,7 @@ opt.clipboard = "unnamedplus"
 opt.termguicolors = true
 opt.signcolumn = "yes"
 
---Indent-Blankline
+-----Indent-Blankline-----
 local function beautify_linenr()
     local grey, accent = "#7f848e", "#ff9e64"
     vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
@@ -52,3 +52,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         beautify_indent()
     end,
 })
+
+-----Neovide-----
+if vim.g.neovide then
+    vim.o.guifont = "RecMonoCasual Nerd Font:h22"
+end
