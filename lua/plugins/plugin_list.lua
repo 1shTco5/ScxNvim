@@ -16,6 +16,7 @@ return {
     require("plugins.plugin_config.codecompanion"),
     require("plugins.plugin_config.flash"),
     require("plugins.plugin_config.telescope"),
+    require("plugins.plugin_config.unity_sync"),
 
 ----------Lsp----------
     require("plugins.lsp.mason"),
