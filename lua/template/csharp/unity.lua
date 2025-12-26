@@ -1,7 +1,7 @@
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "cs",
     callback = function()
-        vim.keymap.set("n", "<leader>us", function()
+        vim.keymap.set("n", "<leader>ut", function()
             local filename = vim.fn.expand("%:t:r")
             -- filename = filename:gsub("^%l", string.upper)
             local lines = {
