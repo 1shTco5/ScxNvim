@@ -53,7 +53,33 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 
+-----TogTerminal-----
+local powershell_options = {
+    shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
+    shellcmdflag =
+    "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
+    shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait",
+    shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode",
+    shellquote = "",
+    shellxquote = "",
+}
+
+for option, value in pairs(powershell_options) do
+    vim.opt[option] = value
+end
+
 -----Neovide-----
 if vim.g.neovide then
+    opt.title = true
+    opt.titlestring = "sTcx"
+    vim.g.neovide_title_background_color = "#1e1e2e"
+    vim.g.neovide_title_text_color = "CornflowerBlue"
+
     vim.o.guifont = "RecMonoCasual Nerd Font:h22"
+
+    vim.g.neovide_input_use_logo = true
+    
+    vim.keymap.set('', '<C-v>', '"+P', {noremap = true, silent = true})
+    vim.keymap.set('i', '<C-v>', '<C-r>+', {noremap = true})
+    vim.keymap.set('c', '<C-v>', '<C-r>+', {noremap = true})
 end
