@@ -1,3 +1,7 @@
+local function filter_no_meta(fs_entry)
+    return not fs_entry.name:match('%.meta$')
+end
+
 return {
     'nvim-mini/mini.files',
     version = '*',
@@ -14,7 +18,10 @@ return {
                 width_focus = 30,
                 width_nofocus = 15,
                 width_preview = 55,
-            }
+            },
+            content = {
+                filter = filter_no_meta,
+            },
         })
         vim.keymap.set('n', '<leader>e', function()
             local minifiles = require('mini.files')

@@ -2,6 +2,9 @@
 local map = vim.keymap.set
 vim.g.mapleader = " "
 
+map("n", "j", "gj")
+map("n", "k", "gk")
+
 map({ "n", "i" }, "<C-z>", "<cmd>undo<CR>", { silent = true })
 map("i", "jk", "<ESC>")
 

@@ -1,5 +1,5 @@
 return {
-    require("plugins.color_scheme.everforest"),
+    require("plugins.color_scheme.catppuccin"),
     require("plugins.plugin_config.mini_file"),
     require("plugins.plugin_config.mini_cursorword"),
     require("plugins.plugin_config.lualine"),
@@ -24,6 +24,7 @@ return {
     require("plugins.lsp.blink"),
     require("plugins.lsp.lspsaga"),
     require("plugins.lsp.formatter"),
+    require("plugins.lsp.roslyn"),
 
 ----------Dap----------
     require("plugins.dap.dap")

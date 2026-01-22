@@ -75,7 +75,7 @@ if vim.g.neovide then
     vim.g.neovide_title_background_color = "#1e1e2e"
     vim.g.neovide_title_text_color = "CornflowerBlue"
 
-    vim.o.guifont = "RecMonoCasual Nerd Font:h22"
+    vim.o.guifont = "RecMonoCasual_Nerd_Font_Mono,YouYuan:h16:b" --字体预览 font preview
 
     vim.g.neovide_input_use_logo = true
     
